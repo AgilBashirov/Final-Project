@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Navbar</title>
+	<title>Home</title>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,700&display=swap" rel="stylesheet">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
@@ -26,9 +26,22 @@
 				<li><a href="/services">Services</a></li>
 				<li><a href="/product">Product</a></li>
 				<li><a href="/technology">Technology</a></li>
-				<li><a href="/about">About</a></li>
-				<li class="m-hide"><a href="/client">Client</a></li>
-				<li class="m-hide"><a href="/partner">Partner</a></li>
+                <li class="arrowed-links">
+                    <a href="./about.html">About</a>
+                    <svg width="13" height="9" viewBox="0 0 13 9" xmlns="http://www.w3.org/2000/svg">
+						<path d="M0 1.71429L6.5 9L13 1.71429L11.4706 8.83195e-07L6.5 5.57143L1.52941 0L0 1.71429Z" />
+                    </svg>
+                </li>
+				<li class="m-hide arrowed-links">
+					<a href="./client.html">Client</a>
+					<svg width="13" height="9" viewBox="0 0 13 9" xmlns="http://www.w3.org/2000/svg">
+						<path d="M0 1.71429L6.5 9L13 1.71429L11.4706 8.83195e-07L6.5 5.57143L1.52941 0L0 1.71429Z" />
+					</svg>
+				</li>
+				<li class="m-hide">
+					<a href="/partner">Partner</a>
+					
+				</li>
 			</ul>
 			<ul class="nav-icons">
 				<li><a href=""><img src="./img/union.svg" alt=""></a></li>
@@ -36,7 +49,7 @@
 				<li><a href=""><img src="./img/media.svg" alt=""></a></li>
 			</ul>
 		</div>
-	</nav>
+    </nav>
 	<main>
 		<div class="main-first">
 			<div class="part1">
@@ -103,8 +116,6 @@
 			</div>
 		</div>
 	</main>
-
-	
 	<script src="script.js"></script>
 </body>
 
