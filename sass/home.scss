@@ -1,140 +1,7 @@
-nav {
-	
-	background-color: $clr-white;
-	box-shadow: $light-shadow;
-	.nav-center {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		max-width: 1298px;
-		padding: 1rem;
-		margin: 0 auto;
-		@include mobile {
-			max-width: 100%;
-			display: block;
-			padding: 0;
-		}
-	}
-	.nav-header {
-		@include mobile {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			padding: 1rem;
-			box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-			
-		}
-		.logo {
-			height: 56px;
-			width: 119px;
-
-		}
-		.nav-toggle {
-			display: none;
-			width: 30px;
-			height: 30px;
-			background-color: transparent;
-			border-color: transparent;
-			transition: $transition;
-			cursor: pointer;
-			@include mobile {
-				display: block;
-			}
-		}
-	}
-	.links {
-		// display: flex;
-		// justify-content: center;
-		// align-items: center;
-		// transition: $transition;
-		&.show-links {
-			height: 394px;
-		}
-		@include mobile {
-			display: block;
-			overflow: hidden;
-			height: 0;
-		}
-		li{
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			svg{
-				fill:  $clr-grey-3;
-				
-			}
-			&:hover{
-				svg{
-					fill: $clr-primary-5;
-					transition: $transition;
-					transform: rotate(360deg);
-				}
-			}
-			@include mobile {
-				margin: 39px 0;
-			}
-			&.droppdown{
-				display: none;
-				position: relative;
-				color: red;
-				margin-right: 20px;
-				a{
-					margin-right: 8px;
-				}
-				
-			}
-		}
-
-		.m-hide{
-			@include mobile {
-				display: none;
-			}
-		}
-
-		a {
-			display: block;
-			margin: 0 1.5rem 3px;
-			padding: 0.5 1rem;
-			color: $clr-grey-3;
-			font-size: 1rem;
-			text-transform: capitalize;
-			letter-spacing: $spacing;
-			transition: $transition;
-			&:hover {
-				color: $clr-primary-5;
-			}
-		}
-	}
-	.nav-icons {
-		display: flex;
-		@include mobile {
-			display: flex;
-			overflow: hidden;
-			height: 0;
-			&.show-nav-icons {
-				height: 134px;
-				align-items: flex-end;
-				justify-content: flex-start;
-				padding-bottom: 30px;
-			  }
-			& li{
-				padding: 0;
-				margin-left: 10px;
-			}	
-		}
-		a {
-			margin: 0 0.5rem;
-			color: $clr-primary-5;
-			transition: $transition;
-			&:hover {
-				color: $clr-primary-7;
-			}
-		}
-	}
-}
-
-
 main{
+	&.hide{
+		display: none;
+	}
 	.main-first{
 		padding-top: 125px;
 		padding-bottom: 160px;
@@ -161,7 +28,7 @@ main{
 				font-size: 48px;
 				line-height: 64px;
 				width: 545px;
-
+				
 				span{
 					color: $clr-red;
 				}
@@ -189,9 +56,9 @@ main{
 					text-align: center;
 					width: 383px;
 					padding: 16px 0;
-
+					
 				}
-
+				
 	
 			}
 			a{
@@ -212,43 +79,43 @@ main{
 				border-radius: 4px;
 				text-decoration: none; 
 			}
-	
+			
 		}
 		.part2{
-				width: 562.97px;
-				height: 381.61px;
+			width: 562.97px;
+			height: 381.61px;
 				@include mobile{
 					width: 349px;
 					height: 236.57px;
 				}
+			}
+			
+			
 		}
-
-		
-	}
 	.main-second{
-		background-color: #F7F7F7;;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-evenly;
-		align-items: center;
-		@include mobile{
-			height: 867px;
-		}
-		.part1{
-			padding-top: 36px;
-			width: 452.94px;
+			background-color: #F7F7F7;;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-evenly;
+			align-items: center;
 			@include mobile{
-				width: 349px;
-				height: 340.54px;
+				height: 867px;
+			}
+			.part1{
+				padding-top: 36px;
+				width: 452.94px;
+				@include mobile{
+					width: 349px;
+					height: 340.54px;
 			}
 		}
 		.part2{
 			width: 452.94px;
-
+			
 			h2{
 				padding-top: 57px;
 				padding-bottom: 24px;
-
+				
 				font-style: normal;
 				font-weight: 500;
 				font-size: 32px;
@@ -263,7 +130,7 @@ main{
 			}
 			p{
 				padding-bottom: 63px;
-
+				
 				font-style: normal;
 				font-weight: normal;
 				font-size: 18px;
@@ -275,7 +142,7 @@ main{
 			}
 		}
 		
-
+		
 	}
 	.cards-section{
 		.card-title{
@@ -302,6 +169,7 @@ main{
 	
 			}
 			.card{
+				// height: 360px;
 				width: 363px;
 				@include mobile{
 					display: grid;
@@ -321,13 +189,13 @@ main{
 				p{
 					width: 319px;
 					height: 108px;
-	
+					
 					font-style: normal;
 					font-weight: normal;
 					font-size: 18px;
 					line-height: 27px;
 					color: #30444E;
-	
+					
 				}
 				a{
 					display: flex;
@@ -354,10 +222,13 @@ main{
 
 				}
 			}
-	
+			
 		}
 	}
 	.contact{
+		// width: 1126px;
+		// height: 188px;
+		// margin: 0 157px;
 		display: flex;
 		justify-content: space-evenly;
 		@include mobile{

@@ -2,9 +2,16 @@
 const navToggle = document.querySelector(".nav-toggle");
 const links = document.querySelector(".links");
 const socialIcons = document.querySelector(".nav-icons");
+const main = document.querySelector('main');
+const header = document.querySelector('header');
+
 
 navToggle.addEventListener("click", () => {
 	console.log(links.classList.contains("show-links"));
+
+	// document.querySelector('main').classList.toggle("hide");
+	// document.querySelector('header').classList.toggle("hide");
+
 	
 	links.classList.toggle("show-links");
 	socialIcons.classList.toggle("show-nav-icons");
