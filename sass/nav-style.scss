@@ -80,7 +80,7 @@ nav {
 			}
 			&:hover{
 				svg{
-					fill: $clr-primary-5;
+					fill:  linear-gradient(to right, $first-clr, $second-clr, $third-clr);
 					transition: $transition;
 					transform: rotate(360deg);
 				}
@@ -88,8 +88,37 @@ nav {
 			@include mobile {
 				margin: 39px 0;
 			}
-			&.arrowed-links{
+			&.droppdown{
+				// display: none;
+				position: relative;
 				margin-right: 20px;
+				.droppdown-content{
+					width: 200px;
+          			transform: scaleY(0);
+          			transform-origin: top;
+					  transition: 0.5s;
+					  transition-delay: 0.5s;
+          			background-color: white;
+          			position: absolute;
+          			list-style: none;
+          			padding: 1rem;
+					margin: 0 10px;
+					top: 60px;
+					text-align: center;
+					font-size: 0.2rem;
+					
+
+					li {
+						padding: 10px;
+						&:hover {
+						  background-color: #f4f5f8;
+						  color: $clr-primary-5;
+						}
+					  }
+				}
+				&:hover .droppdown-content {
+					transform: scale(1);
+				  }
 				a{
 					margin-right: 8px;
 				}
