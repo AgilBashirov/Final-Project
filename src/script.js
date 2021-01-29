@@ -8,14 +8,16 @@ const header = document.querySelector('header');
 
 navToggle.addEventListener("click", () => {
 	console.log(links.classList.contains("show-links"));
-
-	// document.querySelector('main').classList.toggle("hide");
-	// document.querySelector('header').classList.toggle("hide");
-
+	
+	
 	
 	links.classList.toggle("show-links");
 	socialIcons.classList.toggle("show-nav-icons");
-
+	
+	// For prevent scroll when open hamburger menu
+	document.querySelector('main').classList.toggle("hide");
+	document.querySelector('footer').classList.toggle("hide");
+	document.querySelector('.header-bg-image').classList.toggle("hide");
 });
 
 window.addEventListener("resize", () => links.classList.remove("show-links"));

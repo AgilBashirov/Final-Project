@@ -1,5 +1,8 @@
 header{
 	.header-content{
+		&.hide{
+			display: none;
+		}
 		padding-top: 125px;
 		padding-bottom: 160px;
 		display: flex;
@@ -92,7 +95,8 @@ header{
 }
 main{
 	&.hide{
-		display: none;
+		// display: none;
+		height: 0;
 	}
 	.main-content{
 			background-color: #F7F7F7;;

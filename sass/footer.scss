@@ -1,4 +1,7 @@
 footer{
+    &.hide{
+        display: none;
+    }
     .contact{
         padding: 80px 160px;
         .first{

@@ -7,15 +7,17 @@ header{
         background-origin: border-box;
         background-size: contain;
         background-repeat: no-repeat;
-        // background-clip: initial;
-
+        
         @include mobile{
             background: url(../assets/img/client-icons/client-bg-m.svg);
             height: 380px;
             width: 100%;
             background-repeat: no-repeat;
             background-origin: border-box;
-
+            
+        }
+        &.hide{
+            display: none !important;
         }
     }
 
