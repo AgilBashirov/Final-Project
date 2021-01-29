@@ -1,8 +1,5 @@
-main{
-	&.hide{
-		display: none;
-	}
-	.main-first{
+header{
+	.header-content{
 		padding-top: 125px;
 		padding-bottom: 160px;
 		display: flex;
@@ -92,7 +89,12 @@ main{
 			
 			
 		}
-	.main-second{
+}
+main{
+	&.hide{
+		display: none;
+	}
+	.main-content{
 			background-color: #F7F7F7;;
 			display: flex;
 			flex-wrap: wrap;
@@ -225,64 +227,5 @@ main{
 			
 		}
 	}
-	.contact{
-		// width: 1126px;
-		// height: 188px;
-		// margin: 0 157px;
-		display: flex;
-		justify-content: space-evenly;
-		@include mobile{
-			flex-wrap: wrap;
-		}
-		.cont-card-1{
-			width: 400px;
-			h4{
-				font-style: normal;
-				font-weight: 500;
-				font-size: 18px;
-				line-height: 21px;	
-				color: #263238;
-			}
-			p{
-				font-style: normal;
-				font-weight: 300;
-				font-size: 18px;
-				line-height: 27px;
-				color: #263238;
-			}
-			img{
-				margin-top: 28px;
-				margin-bottom: 10px;
-				width: 119px;
-				height: 56px;
-			}
-		}
-		.cont-card-2{
-			width: 400px;
-			h4{
-				font-style: normal;
-				font-weight: 500;
-				font-size: 24px;
-				line-height: 28px;
-				color: #263238;
-				margin-top: 51px;
-				margin-bottom: 15px;
-			}
-			p{
-				font-style: normal;
-				font-weight: 300;
-				font-size: 18px;
-				line-height: 27px;
-				color: #263238;
-			}
-		}
-		.cont-card-3{
-			
-			width: 417px;
-			height: 102.27px;
-			margin-top: 75px;
-			margin-bottom: 10px;
-			
-		} 
-	}
 }
+

@@ -25,8 +25,8 @@ window.addEventListener("resize", () => socialIcons.classList.remove("show-nav-i
 // Slider elements
 const prevBtn = document.querySelector('.prev-btn');
 const nextBtn = document.querySelector('.next-btn');
-imageBox = document.querySelector('.image-box');
-TextBox = document.querySelector('.text-content');
+const imageBox = document.querySelector('.image-box');
+const TextBox = document.querySelector('.text-content');
 
 
 prevBtn.addEventListener('click', (e)=>{

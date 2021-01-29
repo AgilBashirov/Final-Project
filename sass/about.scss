@@ -8,9 +8,6 @@ body{
             margin: 0 auto;
         }
     }
-    nav{
-        @import "./nav-style.scss";
-    }
     main{
         .row::after {
             content: "";
@@ -98,7 +95,7 @@ body{
                 color: $clr-dark;
                 &::after{
                     //underline - zigzag
-                    content: url(/img/zig-line.svg);
+                    content: url(../assets/img/zig-line-red.svg);
                     display: block;
                     margin-top: -10px;
                 }
@@ -153,7 +150,7 @@ body{
                 cursor: context-menu;
                 &::after{
                     //underline - zigzag
-                    content: url(/img/zig-line.svg);
+                    content: url(../assets/img/zig-line-red.svg);
                     display: block;
                     margin-top: -25px;
                 }
@@ -239,6 +236,7 @@ body{
                     color: #FFFFFF;
                     @include mobile{
                         margin: 0;
+                        padding: 0;
                         width: 100%;
                     }
                 }
@@ -250,7 +248,7 @@ body{
                     color: #FFFFFF;
                     &::after{
                         //underline - zigzag
-                        content: url(/img/zig-line-black.svg);
+                        content: url(../assets/img/zig-line-black.svg);
                         display: block;
                         margin-top: -10px;
     
@@ -301,7 +299,7 @@ body{
             padding: 50px 0;
             &::after{
                 //underline - zigzag
-                content: url(/img/zig-line.svg);
+                content: url(../assets/img/zig-line-red.svg);
                 display: block;
                 margin-top: -10px;
             }
@@ -321,30 +319,56 @@ body{
                     width: 347px;
                 }
             }
-            .c-card{
-                img{
-                    margin: 26px;
-                    margin-left: 64px;
-                }
-                strong{
-                    display: block;
-                    font-style: normal;
-                    font-weight: 500;
-                    font-size: 24px;
-                    line-height: 46px;
-                    color: #1F2E35;
-                }
-                p{
-                    font-style: normal;
-                    font-weight: normal;
-                    font-size: 18px;
-                    line-height: 30px;
-                    color: #30444E;
-        
+            .card-section{
+                padding: 0 64px;
+
+                .card{
+                    padding-bottom: 42px;
+                    display: flex;
+                    .text{
+                        transition: $transition;
+                        padding-left: 37px;
+                        strong{
+                            display: block;
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 24px;
+                            line-height: 46px;
+                            color: #1F2E35;
+                        }
+                        p{
+                            font-style: normal;
+                            font-weight: normal;
+                            font-size: 18px;
+                            line-height: 30px;
+                            color: #30444E;
+                            width: 354px;
+                            &:hover{
+                                color: $clr-red;
+                            }
+                            @include mobile{
+                                max-width: 255px;
+                            }
+                
+                        }
+                        &:hover{
+                            strong{
+                                color: black;
+
+                            }
+                            p{
+                                color: $clr-red;
+                            }
+                        }
+                    }
+                    @include mobile{
+                        padding: 20px 0;
+                    }
                 }
                 @include mobile{
-                    padding: 20px 0;
+                    padding: 0;
                 }
+
             }
             @include mobile{
                 .col-6{
@@ -355,81 +379,6 @@ body{
                 width: 100%;
             }
     
-        }
-        .contact{
-            padding: 80px 160px;
-            .first{
-                img{
-                    height: 56px;
-                    width: 119px;
-                }
-                strong{
-                    display: block;
-                    padding: 16px 0;
-                    font-style: normal;
-                    font-weight: 500;
-                    font-size: 18px;
-                    line-height: 21px;
-                    color: #263238;
-                }
-                address{
-                    font-style: normal;
-                    font-weight: 300;
-                    font-size: 18px;
-                    line-height: 27px;
-                    color: #263238;
-                }
-            }
-            .second{
-                strong{
-                    display: block;
-                    font-style: normal;
-                    font-weight: 500;
-                    font-size: 24px;
-                    line-height: 28px;
-                    color: #263238;
-                    padding: 25px 0;
-                }
-                address{
-                    font-style: normal;
-                    font-weight: 300;
-                    font-size: 18px;
-                    line-height: 27px;
-                    color: #263238;
-                }
-            }
-            .third{
-                padding-top: 50px;
-                div{
-                    display: flex;
-                }
-            }
-            @include mobile{
-    
-                .col-4{
-                    width: 100%;
-                }
-                margin: 0;
-                padding: 28px 32px;
-                width: 100%;
-            }
-        }
-        .footer{
-            margin-bottom: -19px;
-            p{
-                background-color: $clr-red;
-                font-style: normal;
-                font-weight: normal;
-                font-size: 18px;
-                line-height: 21px;
-                color: #FFFFFF;
-                padding: 22px 0;
-                text-align: center;
-            }
-            @include mobile{
-                margin-bottom: -20px;
-            }
-        }
-    
+        }    
     }
 }

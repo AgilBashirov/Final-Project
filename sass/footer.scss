@@ -1,0 +1,89 @@
+footer{
+    .contact{
+        padding: 80px 160px;
+        .first{
+            img{
+                height: 56px;
+                width: 119px;
+            }
+            strong{
+                    display: block;
+                    padding: 16px 0;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 21px;
+                    color: #263238;
+            }
+            address{
+                a{
+                    font-style: normal;
+                    font-weight: 300;
+                    font-size: 18px;
+                    line-height: 27px;
+                    color: #263238;
+                    &:hover{
+                        color: $second-clr;
+                    }
+                }
+
+            }
+        }
+        .second{
+            strong{
+                display: block;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 28px;
+                color: #263238;
+                padding: 25px 0;
+            }
+            address{
+                a{
+                    display: block;
+                    text-decoration: none;
+                    font-style: normal;
+                    font-weight: 300;
+                    font-size: 18px;
+                    line-height: 27px;
+                    color: #263238;
+                    &:hover{
+                        color: $second-clr;
+                    }
+                }
+            }
+        }
+        .third{
+            padding-top: 50px;
+            div{
+                display: flex;
+            }
+        }
+        @include mobile{
+
+            .col-4{
+                width: 100%;
+            }
+            margin: 0;
+            padding: 28px 32px;
+            width: 100%;
+        }
+    }
+    .copyright{
+        margin-bottom: -19px;
+        p{
+            background-color: $clr-red;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 21px;
+            color: #FFFFFF;
+            padding: 22px 0;
+            text-align: center;
+        }
+        @include mobile{
+            margin-bottom: -20px;
+        }
+    }
+}

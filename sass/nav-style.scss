@@ -1,4 +1,4 @@
-nav {
+.navbar {
 	background-color: $clr-white;
 	box-shadow: $light-shadow;
 	.nav-center {
@@ -47,7 +47,10 @@ nav {
 		align-items: center;
 		transition: $transition;
 		&.show-links {
-			height: 394px;
+			
+			// height: 394px;
+			//bu numunedir
+			height: 100%;
 		}
 		@include mobile {
 			display: block;
@@ -138,6 +141,9 @@ nav {
 
 		li:first-child{
 			transform: translateY(-10%);
+			@include mobile{
+				transform: none;
+			}
 		}
 		display: flex;
 		@include mobile {
@@ -159,7 +165,6 @@ nav {
 		a {
 			margin: 0 0.5rem;
 			transition: $transition;
-
 			svg{
 				fill: $clr-dark;
 				&:hover{
